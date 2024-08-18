@@ -4,30 +4,11 @@ function getComputerChoice() {
 	((r > 0.33 && r < 0.66) ? "paper" : "scissors")
 }
 
-function getHumanChoice() {
-    let userInput = prompt("Input your choice (rock/paper/scissors r/p/s):").toLowerCase();
-    switch (userInput) {
-    case "rock":
-    case "paper":
-    case "scissors":
-	return userInput;
-    case "r":
-	return "rock";
-    case "p":
-	return "paper";
-    case "s":
-	return "scissors";
-    default:
-	alert("Invalid input");
-	return getHumanChoice();
-    }
-}
+function playRound(buttonText) {
+    let humanChoice = buttonText.toLowerCase();
+    let computerChoice = getComputerChoice();
 
-let humanScore = 0;
-let computerScore = 0;
-
-function playGame() {
-    function playRound(humanChoice, computerChoice) {
+    function constructGameText() { // Helper function to avoid multiple changes when need to change output
 	if (humanChoice == computerChoice) {
 	    return "Tie!";
 	}
@@ -39,8 +20,7 @@ function playGame() {
 		return "You win! Rock beats Scissors";
 	    case "paper":
 		computerScore++;
-		return "You lose! Paper beats Rock";
-
+		return "You lose! Paper beats Rock";		
 	    }
 	case "scissors":
 	    switch (computerChoice) {
@@ -60,23 +40,33 @@ function playGame() {
 		computerScore++;
 		return "You lose! Scissors beat Paper";
 	    }
-	}   
-    }
-
-    for (let games = 0; games < 5; games++) {
-	let humanSelection = getHumanChoice();
-	let computerSelection = getComputerChoice();
-	
-	console.log(playRound(humanSelection, computerSelection));
+	}
     }
     
-    if (humanScore == computerScore) {
-	alert(`It's a tie! ${humanScore}:${computerScore}`);
-    } else if (humanScore > computerScore) {
-	alert(`You win! ${humanScore}:${computerScore}`);
-    } else {
-	alert(`You lose! ${humanScore}:${computerScore}`);
+    div.textContent = `${humanScore}:${computerScore} ${constructGameText()}`;
+    winnerdiv.textContent = ''; // Avoid displaying winner before the game ends
+
+    if (humanScore >= 5 || computerScore >= 5) { // Check whether any score is higher than 5 and only then display who won
+	if (humanScore == computerScore) {
+	    winnerdiv.textContent = `It's a tie! ${humanScore}:${computerScore}`;	    
+	} else if (humanScore > computerScore) {
+	    winnerdiv.textContent = `You win! ${humanScore}:${computerScore}`;
+	} else {
+	    winnerdiv.textContent = `You lose! ${humanScore}:${computerScore}`;
+	}
+	humanScore = computerScore = 0;
     }
 }
 
-playGame();
+let humanScore = 0;
+let computerScore = 0;
+
+let buttons = document.querySelectorAll("button");
+for (let button of buttons) {
+    button.addEventListener("click", (event) => {
+	playRound(event.target.textContent); // event.target is an element of clicked button
+    });
+}
+
+let div = document.querySelector("div");
+let winnerdiv = document.querySelector("#winner");
