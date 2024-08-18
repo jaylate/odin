@@ -1,6 +1,16 @@
 const gridSizeInPixels = 960;
 let container = document.getElementById("container");
 
+function getRandomColor() {
+    function getRandomValue() {
+	return Math.floor(Math.random()*255);
+    }
+    let red = getRandomValue();
+    let green = getRandomValue();
+    let blue = getRandomValue();
+    return `rgb(${red}, ${green}, ${blue}`;
+}
+
 function makeGrid(gridSize) {
     while (container.firstChild) { // First clean up the grid by deleting all its children (if exist)
 	container.removeChild(container.firstChild);
@@ -10,7 +20,7 @@ function makeGrid(gridSize) {
 	div.innerText = "";
 	div.style.width = div.style.height = `${gridSizeInPixels/gridSize}px`;
 	div.addEventListener("mouseover", () => { // Color is left after the mouse hovered over the div
-	    div.style.backgroundColor = "purple";
+	    div.style.backgroundColor = getRandomColor();
 	});
 	container.appendChild(div);
     }
