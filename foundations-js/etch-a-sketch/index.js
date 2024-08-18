@@ -19,8 +19,11 @@ function makeGrid(gridSize) {
 	let div = document.createElement("div");
 	div.innerText = "";
 	div.style.width = div.style.height = `${gridSizeInPixels/gridSize}px`;
+	div.style.opacity = "0";
 	div.addEventListener("mouseover", () => { // Color is left after the mouse hovered over the div
 	    div.style.backgroundColor = getRandomColor();
+	    if (Number(div.style.opacity) < 1) // After ten tries cell will be completely visible
+		div.style.opacity = String(Number(div.style.opacity) + 0.10);
 	});
 	container.appendChild(div);
     }
