@@ -1,0 +1,19 @@
+#calculator {
+    width: 250px;
+    min-height: 250px;
+}
+
+#buttons {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stratch;
+}
+
+#buttons button {
+    flex: 1;
+    flex-basis: 25%;
+    height: 62.5px;
+}
