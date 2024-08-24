@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Sign-up Form</title>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+	<img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+	Odin
+      </div>
+      <div class="footer">
+	Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Halle West</a> on <a href="https://unsplash.com/">Unsplash</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="header">
+	<p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+	  Sign Up <span class="cursive">now</span> to get started.</p>
+	<p>You <span class="cursive">know</span> you want to.</p>
+      </div>
+      <form method="POST">
+	<section class="form-section">
+	  <legend>Let's do this!</legend>
+	  <div>
+ 	    <label for="first-name">
+	      <span>First name</span>
+	      <input type="text" id="first-name" name="first-name">
+	    </label>
+	    <label for="last-name">
+	      <span>Last name</span>
+	      <input type="text" id="last-name" name="last-name">
+	    </label>
+	    <label for="email">
+	      <span>Email</span>
+	      <input type="email" id="email" name="email">
+	    </label>
+	    <label for="phone-number">
+	      <span>Phone number</span>
+	      <input type="tel" id="phone-number" name="phone-number">
+	    </label>
+	    <label for="password">
+	      <span>Password</span>
+	      <input type="password" id="password" name="password">
+	    </label>
+	    <label for="confirm-password">
+	      <span>Confirm password</span>
+	      <input type="password" id="confirm-password" name="confirm-password">
+	    </label>
+	  </div>
+	</section>
+	<input type="submit" id="submit" value="Create Account">
+      </form>
+      <div class="footer">
+	Already have an account? <a href="#">Log in</a>
+      </div>
+    </div>
+  </body>
+</html>
