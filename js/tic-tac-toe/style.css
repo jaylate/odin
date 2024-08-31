@@ -1,0 +1,15 @@
+.gametable {
+    width: 20%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+    div {
+	width: 100px;
+	height: 100px;
+	border: solid 1px black;
+	
+	align-content: center;
+	text-align: center;
+	font-size: 48px;	
+    }
+}
