@@ -1,0 +1,46 @@
+<div id="container">
+     <div id="todo-list">
+
+     </div>
+     <dialog id="todo-dialog">
+       <form method="dialog"> 
+	 <label for="title"><input name="title" type="text" value=""/></label>
+	 <label for="description"><input name="description" type="text" value=""/></label>
+	 <label for="due-date"><input name="due-date" type="date" value=""/></label>
+	 <label for="priority"><input name="priority" type="number" value=""/></label>
+	 <label for="notes"><textarea cols="30" id="notes" name="notes" rows="10"></textarea></label>
+
+	 <div>
+	   <button value="cancel" formmethod="dialog">Cancel</button>
+	   <button id="confirm" value="default">Confirm</button>
+	 </div>
+       </form>
+     </dialog>
+
+     <dialog id="add-todo-dialog">
+       <form method="dialog">
+	 <label for="title">
+	   Title: <input name="title" type="text" value=""/>
+	 </label>
+	 <label for="description">
+	   Description: <input name="description" type="text" value=""/>
+	 </label>
+	 <label for="due-date">
+	   Due Date: <input name="due-date" type="date" value=""/>
+	 </label>
+	 <label for="priority">
+	   Priority: <input name="priority" type="number" value=""/>
+	 </label>
+	 <label for="notes">
+	   Notes: <textarea cols="30" id="notes" name="notes" rows="10"></textarea>
+	 </label>
+
+	 <div>
+	   <button value="cancel" formmethod="dialog">Cancel</button>
+	   <button id="confirm" value="default">Confirm</button>
+	 </div>
+       </form>
+     </dialog>
+
+     <button id="add-todo">Add TODO</button>
+</div>

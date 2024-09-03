@@ -1,0 +1,64 @@
+/* style.css */
+body {
+    background-color: #E8B86D;
+}
+
+button {
+    background-color: #86AB89;
+    border: none;
+    border-radius: 10px;
+    width: 10rem;
+    height: 2rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+dialog {
+    background-color: #D6EFD8;
+    border: 2px solid #597445;
+    border-radius: 10px;   
+    form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	div {
+	    display: flex;
+	    gap: 8px;
+	}
+    }
+    
+    input, textarea {
+	background-color: #95D2B3;
+	border: none;
+	font-size: 24px;
+	width: 100%;
+    }
+}
+
+#container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    font-size: 22px;
+}
+
+#todo-list div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    
+    input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+    }
+}
