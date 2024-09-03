@@ -28,7 +28,9 @@ class Todo {
     }
 };
 
-let todoList = [];
+let todoList = JSON.parse(localStorage.getItem("todoList"));
+// FIXME: storage support should be done in more elegant way,
+// which will require change of add/change logic in forms
 
 function addTodoItem(title, description, dueDate, priority, notes) {
     todoList.push(new Todo(title, description, dueDate, priority, notes));
@@ -84,6 +86,8 @@ function listTodos() {
 	let itemDiv = makeItemFrom(todo);
 	container.appendChild(itemDiv);
     }
+
+    localStorage.setItem("todoList", JSON.stringify(todoList));
 }
 
 let addButton = document.getElementById("add-todo");
