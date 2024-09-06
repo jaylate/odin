@@ -1,7 +1,11 @@
 import "./style.css";
 
 import { dropdown } from "./dropdown.js";
+import { carousel } from "./carousel.js";
 
-let button = document.querySelector(".menu");
-let dropdownEl = document.querySelector(".dropdown");
+const button = document.querySelector(".menu");
+const dropdownEl = document.querySelector(".dropdown");
 dropdown(button, dropdownEl, false);
+
+const carouselDiv = document.querySelector(".carousel");
+carousel(carouselDiv);
