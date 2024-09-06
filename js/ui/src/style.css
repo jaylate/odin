@@ -21,6 +21,7 @@
   .slide {
     display: none;
   }
+  /* FIXME: hardcorded styling */
   .navigation {
     width: 100%;
     height: 100%;

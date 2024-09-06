@@ -8,4 +8,4 @@ const dropdownEl = document.querySelector(".dropdown");
 dropdown(button, dropdownEl, false);
 
 const carouselDiv = document.querySelector(".carousel");
-carousel(carouselDiv);
+carousel(carouselDiv, 5000);
