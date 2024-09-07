@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Library</title>
     <script src="index.js" defer></script>
   </head>
   <body>
-    <div id="library">
-      
-    </div>
+    <div id="library"></div>
     <dialog id="add_book_dialog">
       <header>
-	<h3>Add new book</h3>
+        <h3>Add new book</h3>
       </header>
       <form id="add_book_form">
-	<label for="title">Title: </label><input name="title" type="text" value""/>
-	<label for="author">Author: </label><input name="author" type="text" value=""/>
-	<label for="pages">Number of pages: </label><input name="pages" type="text" value=""/>
-	<div>
-	  <button value="cancel" formmethod="dialog">Cancel</button>
-	  <button id="confirm" value="default">Confirm</button>
-	</div>
+        <label for="title">Title: </label
+        ><input name="title" type="text" value="" />
+        <label for="author">Author: </label
+        ><input name="author" type="text" value="" />
+        <label for="pages">Number of pages: </label
+        ><input name="pages" type="number" value="" />
+        <div>
+          <button value="cancel" formmethod="dialog">Cancel</button>
+          <button id="confirm" value="default">Confirm</button>
+        </div>
       </form>
     </dialog>
     <button id="add_book">NEW BOOK</button>
