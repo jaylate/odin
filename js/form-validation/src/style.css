@@ -1,0 +1,32 @@
+form {
+  max-width: 400px;
+  display: grid;
+  grid-template-column: 1fr 1fr;
+  label {
+    grid-column: 1;
+  }
+  input {
+    grid-column: 2;
+  }
+  input:focus {
+    border: none;
+  }
+  input:invalid {
+    background-color: #ffdddd;
+    border: solid 2px red;
+  }
+  .error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+  }
+  button {
+    width: 100px;
+  }
+}
