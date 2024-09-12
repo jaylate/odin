@@ -1,0 +1,4 @@
+#weather > div {
+  display: flex;
+  gap: 16px;
+}
