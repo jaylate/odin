@@ -60,6 +60,7 @@ module.exports = class Render {
 
           if (gameboardCell.ship) {
             if (gameboardCell.ship.isSunk()) cell.textContent = "X";
+            else if (gameboardCell.hit) cell.textContent = "*";
             else if (isPlayerTurn) cell.textContent = "<";
           }
 
