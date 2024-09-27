@@ -1,0 +1,20 @@
+#+TITLE: Battleship project
+
+Implementation of the battleship game which has a big room for improvement
+
+** TODOs
+*** UI
+- New game/Clear board/Player's name inputs
+- Improve design
+- DONE Input to choose with whom to play (Player or Computer)
+- FIXME Creating new game is not possible after creating the first one
+   
+*** Functionality
+- Do not allow to hit already hit cell (this can be misused actually)
+- Add not random ships placement
+  + allow user to choose random variant both for whole board and particular ship
+
+*** AI
+- When hit, don't hit completely random places, but rather some random near
+  + "understand" the direction
+  + "understand" sunk state
